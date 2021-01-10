@@ -11,10 +11,16 @@ namespace Proiect1.Models
     {
         public int ID { get; set; }
 
+        [Required, StringLength(150, MinimumLength = 3)]
         [Display(Name = "Titlul Filmului")]
         public string Titlu { get; set; }
+
+        [Required, StringLength(150, MinimumLength = 3)]
+        [Display(Name = "Regizor")]
         public string Regizor { get; set; }
 
+
+        [Range(1, 300)]
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Pret { get; set; }
 
